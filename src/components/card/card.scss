@@ -1,0 +1,73 @@
+
+.card{
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.1em;
+    margin: 5px;
+    background-color: #F4FAFC;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+
+    .info-wrap{
+        width: 80%;
+        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
+        p{margin:0}
+    
+        .name, .profession{
+            display: flex;
+            min-width: 100%;
+        }
+        
+        .age{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .height{
+            margin-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .card-label{
+            font-weight: bold;
+        }
+    
+        .card-value{
+            margin-left: 5px;
+            display: inline-block;
+        }
+    }
+
+    .detail-wrap{
+        border-left: 1px solid #ccc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 18%;
+        .plus-icon{
+            width: 40px;
+            height: 40px;
+            color: #52A6E6;
+            cursor: pointer;
+        }
+        .plus-icon:hover{
+            color: #076CB9;
+        }
+    }
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .card {
+        width: 29%;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
