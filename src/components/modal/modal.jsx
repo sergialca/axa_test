@@ -40,7 +40,7 @@ function Modal(props) {
                     </div>
                     <div className="friend">
                         <span>
-                            {info.friends ? info.friends.length >= 2 ? <b>Friends: </b> : <b>Friend: </b> : ''}
+                            {info.friends ? info.friends.length == 0 ? '' : info.friends.length >= 2 ? <b>Friends: </b> : <b>Friend: </b> : ''}
                             {info.friends ? info.friends.length > 0 ? info.friends.join(', ') : '' : ''}
                         </span>
                     </div>
