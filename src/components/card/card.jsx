@@ -23,8 +23,8 @@ function Card(props) {
                 </div>
                 <div className="profession">
                     <span>
-                        {info.professions.length >= 2 ? <b>Professions: </b> : <b>Profession: </b>}
-                        {info.professions.length > 0 ? info.professions.join(', ') : 'Unknown'}
+                        {info. profession ? info.professions.length >= 2 ? <b>Professions: </b> : <b>Profession: </b> : <b>Profession: </b>}
+                        {info. profession ? info.professions.length > 0 ? info.professions.join(', ') : 'Unknown' : 'Unknown'}
                     </span>
                 </div>
             </div>

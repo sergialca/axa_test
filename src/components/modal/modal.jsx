@@ -3,7 +3,6 @@ import "./modal.scss";
 
 function Modal(props) {
     const {closeModal, show, info} = props;
-    console.log("Modal -> info", info);
     return (
         <div className={show ? "overlay" : "hide"} onClick={closeModal}>
             <div className="modal">
