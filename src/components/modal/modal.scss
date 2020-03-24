@@ -7,15 +7,17 @@
   }
   
   .overlay {
-    background-color: rgba(48, 49, 48, 0.42);
-    height: 100%;
     position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    height: 100%;
+    background-color: rgba(48, 49, 48, 0.42);
     transition: all 1.3s;
   }
   
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+
   .modal {
     width: 300px;
     height: 400px;
@@ -24,6 +26,7 @@
     padding: 10px;
     background-color: #fff;
     border-radius: 2px;
+    transition: transform 0.2s ease;
     box-shadow: 0 2px 8px 3px;
 
     .header{
@@ -64,9 +67,8 @@
     .modal-value{
         margin-left: 5px;
     }
-  }
   
-  .modal button {
+    button {
     position: absolute;
     right: -1rem;
     top: -1rem;
@@ -79,13 +81,17 @@
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.562);
   }
+}
+}
 
   // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .modal {
+    .wrapper{
+      .modal {
         width: 500px;
         height: 450px;
         margin: 50px auto;
+      }
     }
 }
 
