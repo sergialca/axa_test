@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import axios from "axios";
 import Card from "../components/card/card";
-import Modal from "../components/modal/modal";
+//import Modal from "../components/modal/modal";
 import Cmodal from "../components/modal/cmodal";
 import "./home.scss";
 

@@ -6,38 +6,47 @@ class Modal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            friendRecord: this.props.oneRecord,
-            friendsKey: this.props.oneRecord.id
+            friendRecord: {},
+            firstContact: {},
+            showButton: false
         }
     }
 
     componentDidUpdate(prevProps) {
-        // Typical usage (don't forget to compare props):
-        console.log('did update');
         if (this.props.oneRecord !== prevProps.oneRecord) {
-            this.setState({friendRecord: this.props.oneRecord});
+            //console.log('previus props en update ', prevProps.oneRecord);
+            //console.log('current props en update ', this.props.oneRecord);
+            this.setState({
+                friendRecord: this.props.oneRecord,
+                firstContact: this.props.oneRecord,
+                showButton: false
+            });
         }
+      }
+      back = () => {
+        this.setState({friendRecord: this.state.firstContact, showButton: false});
       }
 
     render() {
-        let {friendRecord, friendsKey} = this.state;
+        let {friendRecord, showButton} = this.state;
         const {show, closeModal} = this.props;
-
-       const loadPersonalData = (n) => {
+        let cont = 0;
+        const loadPersonalData = (n) => {
+            this.setState({showButton: true});
             this.props.info.map( i => {
                 if(i.name === n){
                     this.setState({friendRecord: i});
                 }
-            }
-            )
+                return n;
+            })
         }
-
         return (
             <Fragment>
             <div className={show ? "overlay" : "hide"} onClick={closeModal}></div>
             <div className={show ? "wrapper" : "hide"}>
                 <div className="modal">
-                    <button onClick={closeModal}>X</button>
+                    <button className="close-button" onClick={closeModal}>X</button>
+                    <button className={showButton ? "back-button" : "hide"} onClick={() => this.back()} >&lt;back</button>
                     <div className="header">
                         <img className="profile-picture" src={friendRecord.thumbnail} alt="profile"></img>
                         <div className="name">
@@ -72,8 +81,8 @@ class Modal extends Component {
                             <span>
                                 {friendRecord.friends ? friendRecord.friends.length === 0 ? '' : friendRecord.friends.length >= 2 ? <b>Friends: </b> : <b>Friend: </b> : ''}
                                 {friendRecord.friends ? friendRecord.friends.map(f => {
-                                    //this.setState({friendsKey: friendsKey++})
-                                    return <Friends name={f} key={friendsKey} personalData={loadPersonalData}/>;
+                                    cont++
+                                    return <Friends name={f} key={cont} personalData={loadPersonalData}/>;
                                 }) : ''}
                             </span>
                         </div>

@@ -29,12 +29,10 @@ function Card(props) {
                 </div>
             </div>
             <div className="detail-wrap">
-                <a onClick={() => {
+                <FontAwesomeIcon onClick={() => {
                         props.addOneRecord(info)
                         props.onClick();
-                }
-                }>
-                <FontAwesomeIcon className="plus-icon" icon={faPlusCircle}/></a>
+                }} className="plus-icon" icon={faPlusCircle}/>
             </div>
         </div>
         
