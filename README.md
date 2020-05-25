@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The purpose of this project is show contact data as a contact cards and show the detail of each contact when +  is clicked. 
+The purpose of this project is show contact data as a contact cards and show the detail of each contact when + is clicked.
 
 ## Getting started
 
@@ -8,18 +8,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Requires
 
-* Git
-* Node
+- Git
+- Node
 
 ### Deploying development
 
 **1.** Install dependencies:
+
 ```bash
 npm i
 ```
 
 **2.** Execute:
+
 ```bash
 npm start
 ```
+
 **3.** Open http://localhost:3000/
