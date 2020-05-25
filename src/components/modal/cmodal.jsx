@@ -14,8 +14,6 @@ class Modal extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.oneRecord !== prevProps.oneRecord) {
-            //console.log('previus props en update ', prevProps.oneRecord);
-            //console.log('current props en update ', this.props.oneRecord);
             this.setState({
                 friendRecord: this.props.oneRecord,
                 firstContact: this.props.oneRecord,

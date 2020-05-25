@@ -18,8 +18,8 @@ These instructions will get you a copy of the project up and running on your loc
 npm i
 ```
 
-**3.** Execute:
+**2.** Execute:
 ```bash
 npm start
 ```
-**4.** Open http://localhost:3000/
+**3.** Open http://localhost:3000/

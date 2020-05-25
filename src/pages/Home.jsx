@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "../components/card/card";
 //import Modal from "../components/modal/modal";
 import Cmodal from "../components/modal/cmodal";
+import Nav from "../components/nav/nav";
 import "./home.scss";
 
 
@@ -27,6 +28,7 @@ function Home(props) {
     return (
         <Fragment>
             <Cmodal closeModal={closeModal} show={modal} info={records} oneRecord={oneRecord}/>
+            <Nav />
             <div className="cardPanel">
                 {records.map(p => {
                         return <Card key={p.id} info={p} onClick={openModal} addOneRecord={addOneRecord}/>
