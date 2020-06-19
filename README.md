@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The purpose of this project is show contact data as a contact cards and show the detail of each contact when + is clicked.
+The purpose of this project is show contact data as a contact cards and show the detail of each contact when + button is clicked.
 
 ## Getting started
 
